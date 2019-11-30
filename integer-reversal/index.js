@@ -3,8 +3,8 @@
 const reverse = require("../string-reversal/index");
 function intReversal(num) {
     const numStr = num.toString();
-    const result = num < 0 ? parseInt(reverse(numStr), 10) * -1 : parseInt(reverse(numStr),10);
-    return numStr.length > 1 ? Math.floor(result) : num;
+    const result = parseInt(reverse(numStr), 10);
+    return numStr.length > 1 ? Math.floor(result * Math.sign(num)) : num;
 }
 
 module.exports = intReversal;
