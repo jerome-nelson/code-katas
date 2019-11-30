@@ -1,26 +1,8 @@
 function maxChars(str) {
     const list = {};
-
-    for (char of str.split("")) {
-        if (list[char]) {
-            list[char] += 1;
-            continue;
-        }
-
-        list[char] = 1;
-    }
-
-    return Object.keys(list).reduce((prev, curr, i, origin) => {
-        const num = list[curr];
-        for (char of origin) {
-            if (num < list[char]) {
-                return prev;
-            }
-
-            return curr;
-        }
-
-
+    return str.split("").reduce((prev, curr, i) => {
+        list[curr] = list[curr] + 1 || 1;
+        return i > 1 && list[prev] > list[curr] ? prev : curr;
     }, "");
 }
 
