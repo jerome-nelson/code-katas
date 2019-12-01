@@ -5,7 +5,8 @@
   "scripts": {
     "debug-mode": "node inspect",
     "release": "standard-version",
-    "test": "jest --runInBand --watch"
+    "test": "jest --runInBand",
+    "test:dev": "jest --runInBand --watch"
   },
   "repository": {
     "type": "git",
