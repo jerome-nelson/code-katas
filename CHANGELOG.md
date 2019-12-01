@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/jerome-nelson/code-katas/compare/v1.0.0...v1.0.1) (2019-12-01)
+
+
+### Bug Fixes
+
+* **package:** remove watch for ci command ([535c033](https://github.com/jerome-nelson/code-katas/commit/535c033ee799f678968de970e41ba659bd2b2b93))
+
 ## 1.0.0 (2019-12-01)
 
 

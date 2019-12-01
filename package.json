@@ -1,6 +1,6 @@
 {
   "name": "code-katas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of coding katas in JS",
   "scripts": {
     "debug-mode": "node inspect",
