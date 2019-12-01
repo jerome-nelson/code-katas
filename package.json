@@ -4,7 +4,8 @@
   "description": "A collection of coding katas in JS",
   "scripts": {
     "debug-mode": "node inspect",
-    "test": "jest --runInBand"
+    "release": "standard-version",
+    "test": "jest --runInBand --watch"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/jerome-nelson/code-katas#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "standard-version": "^7.0.1"
   }
 }
