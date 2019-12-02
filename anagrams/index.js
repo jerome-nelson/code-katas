@@ -4,7 +4,7 @@ const clean = (str) => str.toLowerCase().replace(/\W/, "");
 // if not the same then not anagram
 // else iterate through first word char by character
 // and check if second string has the same characters
-function anagrams(str, comparison) {
+function _anagrams(str, comparison) {
     str = clean(str);
     comparison = clean(comparison);
 
@@ -23,6 +23,18 @@ function anagrams(str, comparison) {
     }
 
     return true;
+}
+
+// Solution 2 - Simple but more complexity
+function anagrams(str, comparison) {
+    str = clean(str);
+    comparison = clean(comparison);
+
+    if(str.length !== comparison.length) {
+        return false;
+    }
+
+    return str.split("").sort().join("") === comparison.split("").sort().join("");
 }
 
 module.exports = anagrams;
