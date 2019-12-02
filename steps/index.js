@@ -1,7 +1,7 @@
-// Solution - Create a empty string with limit as whitespace.
+// Solution 1 - Create a empty string with limit as whitespace.
 // When looping through - replace specific amount of string with
 // # char
-function steps(num) {
+function _steps(num) {
     let str = " ".repeat(num);
 
     if (num === 1) {
@@ -14,5 +14,16 @@ function steps(num) {
         console.log(str);
     }
 }
+
+// Solution 2 - Recursive solution
+function steps(num, row = 1) {
+    if (row === num) {
+        console.log(`#`.repeat(num));
+        return;
+    }
+    console.log(`#`.repeat(row)+` `.repeat(num - row));
+    steps(num, row + 1);
+}
+
 
 module.exports = steps;
