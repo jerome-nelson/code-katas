@@ -4,7 +4,7 @@ describe("dubstep", () => {
     it("should be defined", () => {
         expect(dubstep).toBeDefined();
     });
-    fit("WUB should be replaced by 1 space", () => {
+    it("WUB should be replaced by 1 space", () => {
         expect(dubstep("AWUBBWUBC")).toBe("A B C");
     });
     it("multiples WUB should be replaced by only 1 space", () => {

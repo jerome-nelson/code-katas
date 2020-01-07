@@ -18,3 +18,12 @@ i.e
 ``` js
 songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB") === WE ARE THE CHAMPIONS MY FRIEND
 ```
+
+## Rough Implementation Sketch
+1. Iterate through characters in string
+    * Each iteration check the next letters for match
+       - Check if the previous character is a space
+        * If iteration is found then replace with space
+        * Or if previous character is a space then remove without replacing
+2. Stop the loop if iteration has exceeded total length or if remaining characters are less than comparison string
+    

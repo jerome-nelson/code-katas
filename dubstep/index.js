@@ -1,22 +1,28 @@
-
-
 function songDecoder(original) {
+    const search = "WUB";
     let transformed = original;
     let pointer = 0;
+    
+    while (pointer < original.length) {
 
-    while (transformed.indexOf("WUB") > -1 || pointer >= original.length) {
-        pointer = transformed.indexOf("WUB");
-        let start = transformed.substr(0, 1);
+        const position = transformed.indexOf(search);
+        const nextSpace = transformed.slice(position -1, position);
 
-        if (pointer - 1 > 0) {
-            start = transformed.substr(0, pointer - 1);
+        if (position > -1) {
+            if (position <= 1) {
+                transformed = original.replace(search, " ");
+            } else {
+                const padding = nextSpace.includes(" ") ? "" : " ";
+                const start = transformed.slice(0, position);
+                const end = transformed.slice(position+3);
+                transformed = (start + padding + end);           
+            }
         }
-
-        const end = transformed.substr(pointer + 2);
-        transformed = start + " " + end;
+        pointer += 3;
     }
-
-    return transformed;
+    
+    return transformed.trim();
 }
+
 
 module.exports = songDecoder;
