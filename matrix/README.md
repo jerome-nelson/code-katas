@@ -18,6 +18,32 @@ i.e
 ```
 
 ## Initial Solution
-* Create a n * n parent list
-  - Iterate n times with consecutive numbers being output into the first sub-array from 1 - 1*n.
-  - Iterate from middle row to end row
+* Create a number counter beginning at `1`.
+* Create row counter and a column counter.
+* Create a `n * n` list
+  - Generate `n` sub lists
+* Look at first sub list of `n` and iterate `n` times 
+  - Add numbers sequentially
+  - Iterate counter until loop has ended
+  - Iterate column.
+* Loop until `n - 1` is reached
+  - Add numbers sequentially to each `list[row][column]` using counter
+  - Iterate counter.
+  - Iterate row.
+* Iterate from `n` to `0`.
+  - Add numbers sequentially to `list[row][column]` using counter
+  - Iterate counter until loop has ended
+  - Decrement column.
+* Loop until `n === 1` is reached 
+  - Add numbers sequentially to `list[row][column]` using counter
+  - Iterate counter until loop has ended
+  - Decrement row.
+* Loop until `n - 1` is reached
+  - Add numbers sequentially to `list[row][column]` using counter
+  - Iterate counter until loop has ended
+  - Increment column.
+  
+* Loop until `n === 1` is reached
+  - Add numbers sequentially to `list[row][column]` using counter
+  - Iterate counter until loop has ended
+  - Increment column.

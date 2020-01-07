@@ -4,6 +4,7 @@ describe("matrix", () => {
     it("should be defined", () => {
         expect(matrix).toBeDefined();
     });
+
     it('matrix is a function', () => {
         expect(typeof matrix).toEqual('function');
     });
